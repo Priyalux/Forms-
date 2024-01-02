@@ -1,0 +1,103 @@
+<html>
+<head>
+    <p id="demo"></p>
+    <script>
+        function validateForm()
+        {
+            
+
+            let x = document.getElementById("fname").value;
+            let s = x.trim();
+            let y = document.forms["formform"]["lname"].value;
+            let t = y.trim();
+            let a = document.forms["formform"]["email"].value;
+            let b = document.forms["formform"]["password"].value;
+            let text;
+           
+            if (x == "")
+            {
+                text = "FirstName is not entered";
+                
+            }
+            else{
+                  text = "input is correct";
+            } 
+
+            if(y == "")
+            {
+                alert("Lastname should be filled to submit the form");
+                return false;
+            }
+            if(t == "")
+            {
+                alert("Lastname should be filled to submit the form");
+                return false;
+            }
+            if(a == "")
+            {
+                alert("Email Id should be filled to submit the form");
+                return false;
+            }
+            if(b == "")
+            {
+                alert("Password should be filled to submit the form");
+                return false;
+            }
+
+            document.getElementById("demo").innerHTML= text;
+
+        }
+        
+    </script>
+</head>
+<body>
+
+
+    <style>
+
+        
+        .forms{
+            color:greenyellow;
+            
+        }
+        .details{
+            width:50%;
+            
+            background-color: honeydew;
+            }
+        
+
+        </style>
+       
+        
+
+    <h1 class="forms">FORM</h1>
+    <h4>Please fill the required details</h4>
+     <div class="details">
+    <form name="formform" action="https://support.google.com/chrome?p=help&ctx=keyboard#topic=7439538" onsubmit="return validateForm()">
+        <label for="fname"> FIRST NAME : </label><br>
+        <input type="text" id="fname" name="fname" ><br>
+        
+        <label for="lname"> LAST NAME : </label><br>
+        <input type="text" id="lname" name="lname"><br>
+        
+        <label for="email"> EMAIL ID : </label><br>
+        <input type="email" id="email" name=email><br>
+       
+        <label for="password"> PASSWORD : </label><br>
+        <input type="password" id="password" name="password">
+        
+         <p>GENDER : </p>
+        <input type="radio" id="male" name="male" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="female" value="Female">
+        <label for="female">Female</label><br>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        </form>
+
+        </div>
+</body>
+</html>
+         
